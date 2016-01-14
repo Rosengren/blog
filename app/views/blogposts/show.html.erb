@@ -11,10 +11,10 @@
 
     <% @bpcomments.each do |comment| %>
       <tr>
-        <td><%= comment.commenttext %></td>
-        <td><%= comment.author %></td>
-        <td><%= comment.blogpost %></td>
-        <td><%= link_to 'Show', comment %></td>
+          <td><b>Comment: </b><%= comment.commenttext %></td>
+          <td><br/><b>Author: </b><%= comment.author %></td>
+          <td><br/><b>Blogpost: </b><%= comment.blogpost %></td>
+          <td><br/><%= link_to 'Show', comment %></td>
         <td><%= link_to 'Edit', edit_comment_path(comment) %></td>
         <td><%= link_to 'Destroy', comment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
